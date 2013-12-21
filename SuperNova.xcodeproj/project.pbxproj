@@ -25,6 +25,7 @@
 		3A93F6BC18657A8500E145DC /* SNArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93F6B918657A8500E145DC /* SNArtist.m */; };
 		3A93F6BD18657A8500E145DC /* SNMusicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93F6BB18657A8500E145DC /* SNMusicLibrary.m */; };
 		3A93F6C01865854200E145DC /* SNAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93F6BF1865854200E145DC /* SNAlbum.m */; };
+		3A93F6C31865B9EC00E145DC /* SNTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93F6C21865B9EC00E145DC /* SNTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		3A93F6BB18657A8500E145DC /* SNMusicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNMusicLibrary.m; sourceTree = "<group>"; };
 		3A93F6BE1865854200E145DC /* SNAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlbum.h; sourceTree = "<group>"; };
 		3A93F6BF1865854200E145DC /* SNAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbum.m; sourceTree = "<group>"; };
+		3A93F6C11865B9EC00E145DC /* SNTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTableViewController.h; sourceTree = "<group>"; };
+		3A93F6C21865B9EC00E145DC /* SNTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 			children = (
 				3A93F6A41865743C00E145DC /* SNViewController.h */,
 				3A93F6A51865743C00E145DC /* SNViewController.m */,
+				3A93F6C11865B9EC00E145DC /* SNTableViewController.h */,
+				3A93F6C21865B9EC00E145DC /* SNTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			files = (
 				3A93F6C01865854200E145DC /* SNAlbum.m in Sources */,
 				3A93F67A186573CA00E145DC /* main.m in Sources */,
+				3A93F6C31865B9EC00E145DC /* SNTableViewController.m in Sources */,
 				3A93F6BC18657A8500E145DC /* SNArtist.m in Sources */,
 				3A93F6BD18657A8500E145DC /* SNMusicLibrary.m in Sources */,
 				3A93F6A61865743C00E145DC /* SNViewController.m in Sources */,
