@@ -7,11 +7,14 @@
 //
 
 #import "SNMusicLibrary.h"
+#import "SNArtist.h"
 
 @implementation SNMusicLibrary
 
-- (void)getArtistsByLibrary
+- (NSArray *)getArtistsByLibrary
 {
+    NSMutableArray *mArtists = [[NSMutableArray alloc] init];
+    
     // メディアクエリの指定：
     // メディアプロパティ述語を含まないため、iPodライブラリ全体になります
     MPMediaQuery *everything = [[MPMediaQuery alloc] init];
@@ -24,9 +27,15 @@
     for (MPMediaItemCollection *item in collections) {
         MPMediaItem *representativeItem = [item representativeItem];
         NSString *artistName = [representativeItem valueForProperty:MPMediaItemPropertyArtist];
-        NSString *genre = [representativeItem valueForProperty:MPMediaItemPropertyGenre];
-        NSLog(@"name = %@, genre = %@", [representativeItem description], genre);
+        MPMediaItemArtwork *artwork = [representativeItem valueForProperty:MPMediaItemPropertyArtwork];
+        
+        SNArtist *artist = [[SNArtist alloc] init];
+        artist.name = artistName;
+        artist.artwork = [artwork imageWithSize:CGSizeMake(200, 200)];
+        [mArtists addObject:artist];
     }
+    
+    return [NSArray arrayWithArray:mArtists];
 }
 
 @end

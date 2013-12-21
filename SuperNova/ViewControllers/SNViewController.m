@@ -19,7 +19,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     SNMusicLibrary *ml = [[SNMusicLibrary alloc] init];
-    [ml getArtistsByLibrary];
+    NSArray *artists = [ml getArtistsByLibrary];
+    
+    for (id item in artists) {
+        UIImage *img = [item valueForKey:@"artwork"];
+        NSString *name = [item valueForKey:@"name"];
+        NSLog(@"name = %@ artwork = %@", name, img);
+    }
 }
 
 - (void)didReceiveMemoryWarning

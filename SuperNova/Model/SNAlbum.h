@@ -1,5 +1,5 @@
 //
-//  SNArtist.h
+//  SNAlbum.h
 //  SuperNova
 //
 //  Created by 清 貴幸 on 2013/12/21.
@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNArtist : NSObject
+@interface SNAlbum : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) UIImage *artwork;
+@property (nonatomic, strong) NSString *artistName;
+@property (nonatomic, strong) NSString *artwork;
+@property (nonatomic, strong) NSString *releaseDate;
 
 @end

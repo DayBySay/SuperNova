@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSArray *artists;
 @property (nonatomic, strong) NSArray *albums;
 
-- (void)getArtistsByLibrary;
+- (NSArray *)getArtistsByLibrary;
 
 @end
