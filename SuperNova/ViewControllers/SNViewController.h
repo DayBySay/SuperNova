@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SNViewController : UIViewController
+@interface SNViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *artists;
+@property (weak, nonatomic) IBOutlet UITableView *artistTableView;
 
 @end
