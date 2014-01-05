@@ -9,6 +9,8 @@
 #import "SNArtistViewController.h"
 #import "SNAlbum.h"
 #import "UIImageView+AFNetworking.h"
+#import "SNAlbumListViewController.h"
+#import "SNAlbumViewController.h"
 
 @interface SNArtistViewController ()
 
@@ -47,6 +49,7 @@
                                NSArray *results = [responseObject objectForKey:@"results"];
                                for (NSDictionary *item in results) {
                                    SNAlbum *album = [[SNAlbum alloc] init];
+                                   album.collectionId = [item objectForKey:@"collectionId"];
                                    album.name = [item objectForKey:@"collectionName"];
                                    album.artwork = [item objectForKey:@"artworkUrl100"];
                                    album.releaseDate = [item objectForKey:@"releaseDate"];
@@ -95,7 +98,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    SNAlbumViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snalbum"];
+    vc.album = [self.albums objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

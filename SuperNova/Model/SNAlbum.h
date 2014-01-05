@@ -11,6 +11,7 @@
 
 @interface SNAlbum : NSObject
 
+@property (nonatomic, strong) NSString *collectionId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *artistName;
 @property (nonatomic, strong) NSString *artwork;
