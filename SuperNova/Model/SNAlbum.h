@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface SNAlbum : NSObject
 
@@ -15,4 +16,8 @@
 @property (nonatomic, strong) NSString *artwork;
 @property (nonatomic, strong) NSString *releaseDate;
 
+
++ (void)getAlbumsByArtistName:(NSString *)artistName
+                  success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                  failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 @end

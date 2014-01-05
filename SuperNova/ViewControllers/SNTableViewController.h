@@ -8,10 +8,8 @@
 
 #import "SNViewController.h"
 
-@interface SNTableViewController : SNViewController <UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate>
-
-@property (weak, nonatomic) IBOutlet UISearchBar *serchBar;
-@property (nonatomic, strong) NSArray *artists;
-@property (weak, nonatomic) IBOutlet UITableView *artistTableView;
+@interface SNTableViewController : SNViewController <UITableViewDataSource, UITableViewDelegate>
+    
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

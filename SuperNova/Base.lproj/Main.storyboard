@@ -12,23 +12,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="mmR-t1-KiM"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="tzp-Hy-xsM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXg-0d-yN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-117" y="39"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Top View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SNTableViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SNTopViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mNa-9O-jp6">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -36,19 +36,22 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Hkg-YH-Iw9"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" id="wgr-Rt-GwZ">
-                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
+                            <searchBar contentMode="redraw" id="eaA-Ac-7Ae">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="0A4-G5-7xl"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Bzy-Yq-AP9"/>
                     <connections>
                         <outlet property="artistTableView" destination="mNa-9O-jp6" id="ZLv-Ne-Gtl"/>
-                        <outlet property="searchDisplayController" destination="c9g-qm-FZ7" id="aTR-Tm-ghQ"/>
-                        <outlet property="serchBar" destination="wgr-Rt-GwZ" id="wV3-i7-kiA"/>
+                        <outlet property="searchDisplayController" destination="H3b-sc-yWG" id="oNN-Ob-Hio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -60,8 +63,60 @@
                         <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="zM3-KL-fIp"/>
                     </connections>
                 </searchDisplayController>
+                <searchDisplayController id="H3b-sc-yWG">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="78u-j0-TjV"/>
+                        <outlet property="searchBar" destination="eaA-Ac-7Ae" id="32Z-vv-Wtc"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="C5d-MI-DuO"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="upL-nK-QM0"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="k7G-wR-5XU"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="364" y="39"/>
+        </scene>
+        <!--Artist View Controller-->
+        <scene sceneID="r1b-uG-wUF">
+            <objects>
+                <viewController storyboardIdentifier="snartist" id="VOn-o6-a0C" customClass="SNArtistViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2RY-2B-Den">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oI8-mr-F42">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="PXA-Fb-QAS">
+                                <rect key="frame" x="140" y="20" width="160" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UNR-Yv-yTZ">
+                                <rect key="frame" x="20" y="162" width="280" height="322"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VOn-o6-a0C" id="W4n-sn-Etk"/>
+                                    <outlet property="delegate" destination="VOn-o6-a0C" id="m0R-mA-xBw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="albumsTableView" destination="UNR-Yv-yTZ" id="aaQ-uy-80A"/>
+                        <outlet property="artistDescriptionView" destination="PXA-Fb-QAS" id="eMY-9r-zgv"/>
+                        <outlet property="artistImageView" destination="oI8-mr-F42" id="1Ka-qO-MhN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owd-uw-NAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="39"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

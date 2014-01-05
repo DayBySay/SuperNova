@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface SNArtist : NSObject
 
+@property (nonatomic) int itunesId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) UIImage *artwork;
 
++ (void)getArtistsByKeyword:(NSString *)keyword
+                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
++ (void)getArtistDescriptionByKeyword:(NSString *)keyword
+                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 @end
