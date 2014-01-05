@@ -22,6 +22,7 @@
 		3A2D42F21879AC32004813A3 /* SNAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42F11879AC32004813A3 /* SNAlbumViewController.m */; };
 		3A2D42F51879AC56004813A3 /* SNAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42F41879AC56004813A3 /* SNAlbumListViewController.m */; };
 		3A2D42F81879AE49004813A3 /* SNTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42F71879AE49004813A3 /* SNTrack.m */; };
+		3A2D43421879C08E004813A3 /* SNModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D43411879C08E004813A3 /* SNModelController.m */; };
 		3A93F66E186573CA00E145DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F66D186573CA00E145DC /* Foundation.framework */; };
 		3A93F670186573CA00E145DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F66F186573CA00E145DC /* CoreGraphics.framework */; };
 		3A93F672186573CA00E145DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F671186573CA00E145DC /* UIKit.framework */; };
@@ -85,6 +86,8 @@
 		3A2D42F41879AC56004813A3 /* SNAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbumListViewController.m; sourceTree = "<group>"; };
 		3A2D42F61879AE49004813A3 /* SNTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTrack.h; sourceTree = "<group>"; };
 		3A2D42F71879AE49004813A3 /* SNTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTrack.m; sourceTree = "<group>"; };
+		3A2D43401879C08E004813A3 /* SNModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNModelController.h; sourceTree = "<group>"; };
+		3A2D43411879C08E004813A3 /* SNModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNModelController.m; sourceTree = "<group>"; };
 		3A93F66A186573CA00E145DC /* SuperNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A93F66D186573CA00E145DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A93F66F186573CA00E145DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -253,6 +256,8 @@
 		3A93F6A31865743C00E145DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A2D43401879C08E004813A3 /* SNModelController.h */,
+				3A2D43411879C08E004813A3 /* SNModelController.m */,
 				3A93F6A41865743C00E145DC /* SNViewController.h */,
 				3A93F6A51865743C00E145DC /* SNViewController.m */,
 				3A93F6C11865B9EC00E145DC /* SNTableViewController.h */,
@@ -409,6 +414,7 @@
 				3A2D42E518797D79004813A3 /* AFURLResponseSerialization.m in Sources */,
 				3A93F6BC18657A8500E145DC /* SNArtist.m in Sources */,
 				3A2D42E418797D79004813A3 /* AFURLRequestSerialization.m in Sources */,
+				3A2D43421879C08E004813A3 /* SNModelController.m in Sources */,
 				3A2D42E218797D79004813A3 /* AFSecurityPolicy.m in Sources */,
 				3A2D42DE18797D79004813A3 /* AFHTTPRequestOperation.m in Sources */,
 				3A2D42EF18799E82004813A3 /* UIImageView+AFNetworking.m in Sources */,

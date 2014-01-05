@@ -7,9 +7,11 @@
 //
 
 #import "SNViewController.h"
+#import "SNModelController.h"
 
-@interface SNAlbumListViewController : SNViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *albumsScrollView;
+@interface SNAlbumListViewController : SNViewController <UIPageViewControllerDelegate>
+@property (nonatomic, strong) UIPageViewController *pageViewController;
+@property (weak, nonatomic) IBOutlet UIView *albumContainerView;
 @property (nonatomic, strong) NSArray *albums;
 
 @end

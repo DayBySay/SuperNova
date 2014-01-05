@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.albumTitleLabel.text = self.album.name;
     self.tracks = [[NSMutableArray alloc] init];
     [SNTrack getTracksByCollectionid:self.album.collectionId
                              success:^(AFHTTPRequestOperation *operation, id responseObject) {

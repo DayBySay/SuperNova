@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *artistName;
 @property (nonatomic, strong) NSString *artwork;
 @property (nonatomic, strong) NSString *releaseDate;
+@property (nonatomic, strong) NSArray *tracks;
 
 
 + (void)getAlbumsByArtistName:(NSString *)artistName

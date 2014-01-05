@@ -12,6 +12,7 @@
 @interface SNAlbumViewController : SNTableViewController
 @property (weak, nonatomic) IBOutlet UITableView *trackTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *artworkImageView;
+@property (weak, nonatomic) IBOutlet UILabel *albumTitleLabel;
 @property (nonatomic, strong) SNAlbum *album;
 @property (nonatomic, strong) NSMutableArray *tracks;
 @end
