@@ -7,8 +7,9 @@
 //
 
 #import "SNAlbumListViewController.h"
-#import "SNAlbumViewController.h"
 #import "SNTrack.h"
+
+#define DURATION 0.3f
 
 @interface SNAlbumListViewController ()
 @property (nonatomic, strong) SNModelController *modelController;
@@ -40,7 +41,6 @@
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +48,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (SNModelController *)modelController
 {
@@ -60,15 +59,26 @@
     return _modelController;
 }
 
-
 #pragma mark - UIPageViewController delegate methods
 
-/*
- - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
- {
- 
- }
- */
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+//    SNAlbumViewController *now = pageViewController.viewControllers[0];
+//    [now animateShrinkDuration:DURATION];
+//    SNAlbumViewController *next = pendingViewControllers[0];
+//    [next animateShrinkDuration:0.0f];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+//    if (self.nowAlbumView == pageViewController.viewControllers[0]) {
+//        [(SNAlbumViewController*)self.pageViewController.viewControllers[0] animateBulgeDuration:DURATION];
+//    } else {
+//        self.nowAlbumView = pageViewController.viewControllers[0];
+//        [self.nowAlbumView animateBulgeDuration:DURATION];
+//    }
+}
+
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
 {

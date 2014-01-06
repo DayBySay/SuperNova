@@ -23,6 +23,14 @@
 		3A2D42F51879AC56004813A3 /* SNAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42F41879AC56004813A3 /* SNAlbumListViewController.m */; };
 		3A2D42F81879AE49004813A3 /* SNTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42F71879AE49004813A3 /* SNTrack.m */; };
 		3A2D43421879C08E004813A3 /* SNModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D43411879C08E004813A3 /* SNModelController.m */; };
+		3A2D4391187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D438E187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m */; };
+		3A2D4392187AEA41004813A3 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D438F187AEA41004813A3 /* easing.c */; };
+		3A2D4395187B0E68004813A3 /* SNUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D4394187B0E68004813A3 /* SNUser.m */; };
+		3A2D439D187B0F43004813A3 /* GPKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D4398187B0F43004813A3 /* GPKeychain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3A2D439E187B0F43004813A3 /* GPUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D439A187B0F43004813A3 /* GPUserDefaults.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3A2D439F187B0F43004813A3 /* LKKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D439C187B0F43004813A3 /* LKKeychain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3A2D43A2187B0FD6004813A3 /* SNUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D43A1187B0FD6004813A3 /* SNUserDefault.m */; };
+		3A2D43A5187B1023004813A3 /* SNKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D43A4187B1023004813A3 /* SNKeyChain.m */; };
 		3A93F66E186573CA00E145DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F66D186573CA00E145DC /* Foundation.framework */; };
 		3A93F670186573CA00E145DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F66F186573CA00E145DC /* CoreGraphics.framework */; };
 		3A93F672186573CA00E145DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A93F671186573CA00E145DC /* UIKit.framework */; };
@@ -88,6 +96,22 @@
 		3A2D42F71879AE49004813A3 /* SNTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTrack.m; sourceTree = "<group>"; };
 		3A2D43401879C08E004813A3 /* SNModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNModelController.h; sourceTree = "<group>"; };
 		3A2D43411879C08E004813A3 /* SNModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNModelController.m; sourceTree = "<group>"; };
+		3A2D438D187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+AHEasing.h"; sourceTree = "<group>"; };
+		3A2D438E187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+AHEasing.m"; sourceTree = "<group>"; };
+		3A2D438F187AEA41004813A3 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		3A2D4390187AEA41004813A3 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		3A2D4393187B0E68004813A3 /* SNUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNUser.h; sourceTree = "<group>"; };
+		3A2D4394187B0E68004813A3 /* SNUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNUser.m; sourceTree = "<group>"; };
+		3A2D4397187B0F43004813A3 /* GPKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeychain.h; sourceTree = "<group>"; };
+		3A2D4398187B0F43004813A3 /* GPKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeychain.m; sourceTree = "<group>"; };
+		3A2D4399187B0F43004813A3 /* GPUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUserDefaults.h; sourceTree = "<group>"; };
+		3A2D439A187B0F43004813A3 /* GPUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUserDefaults.m; sourceTree = "<group>"; };
+		3A2D439B187B0F43004813A3 /* LKKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKKeychain.h; sourceTree = "<group>"; };
+		3A2D439C187B0F43004813A3 /* LKKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKKeychain.m; sourceTree = "<group>"; };
+		3A2D43A0187B0FD6004813A3 /* SNUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNUserDefault.h; sourceTree = "<group>"; };
+		3A2D43A1187B0FD6004813A3 /* SNUserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNUserDefault.m; sourceTree = "<group>"; };
+		3A2D43A3187B1023004813A3 /* SNKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNKeyChain.h; sourceTree = "<group>"; };
+		3A2D43A4187B1023004813A3 /* SNKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNKeyChain.m; sourceTree = "<group>"; };
 		3A93F66A186573CA00E145DC /* SuperNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A93F66D186573CA00E145DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A93F66F186573CA00E145DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +193,30 @@
 				3A2D42DD18797D79004813A3 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3A2D438C187AEA41004813A3 /* AHEasing */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D438D187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.h */,
+				3A2D438E187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m */,
+				3A2D438F187AEA41004813A3 /* easing.c */,
+				3A2D4390187AEA41004813A3 /* easing.h */,
+			);
+			path = AHEasing;
+			sourceTree = "<group>";
+		};
+		3A2D4396187B0F43004813A3 /* GPUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D4397187B0F43004813A3 /* GPKeychain.h */,
+				3A2D4398187B0F43004813A3 /* GPKeychain.m */,
+				3A2D4399187B0F43004813A3 /* GPUserDefaults.h */,
+				3A2D439A187B0F43004813A3 /* GPUserDefaults.m */,
+				3A2D439B187B0F43004813A3 /* LKKeychain.h */,
+				3A2D439C187B0F43004813A3 /* LKKeychain.m */,
+			);
+			path = GPUserDefaults;
 			sourceTree = "<group>";
 		};
 		3A93F661186573CA00E145DC = {
@@ -277,6 +325,8 @@
 		3A93F6A71865744700E145DC /* Libraryies */ = {
 			isa = PBXGroup;
 			children = (
+				3A2D4396187B0F43004813A3 /* GPUserDefaults */,
+				3A2D438C187AEA41004813A3 /* AHEasing */,
 				3A2D42CA18797D79004813A3 /* AFNetworking */,
 			);
 			path = Libraryies;
@@ -302,6 +352,12 @@
 				3A93F6BF1865854200E145DC /* SNAlbum.m */,
 				3A2D42F61879AE49004813A3 /* SNTrack.h */,
 				3A2D42F71879AE49004813A3 /* SNTrack.m */,
+				3A2D4393187B0E68004813A3 /* SNUser.h */,
+				3A2D4394187B0E68004813A3 /* SNUser.m */,
+				3A2D43A0187B0FD6004813A3 /* SNUserDefault.h */,
+				3A2D43A1187B0FD6004813A3 /* SNUserDefault.m */,
+				3A2D43A3187B1023004813A3 /* SNKeyChain.h */,
+				3A2D43A4187B1023004813A3 /* SNKeyChain.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,8 +463,10 @@
 				3A2D42E318797D79004813A3 /* AFURLConnectionOperation.m in Sources */,
 				3A93F6C01865854200E145DC /* SNAlbum.m in Sources */,
 				3A2D42F81879AE49004813A3 /* SNTrack.m in Sources */,
+				3A2D439D187B0F43004813A3 /* GPKeychain.m in Sources */,
 				3A93F67A186573CA00E145DC /* main.m in Sources */,
 				3A2D42F21879AC32004813A3 /* SNAlbumViewController.m in Sources */,
+				3A2D439F187B0F43004813A3 /* LKKeychain.m in Sources */,
 				3A93F6C31865B9EC00E145DC /* SNTableViewController.m in Sources */,
 				3A2D42F51879AC56004813A3 /* SNAlbumListViewController.m in Sources */,
 				3A2D42E518797D79004813A3 /* AFURLResponseSerialization.m in Sources */,
@@ -416,15 +474,21 @@
 				3A2D42E418797D79004813A3 /* AFURLRequestSerialization.m in Sources */,
 				3A2D43421879C08E004813A3 /* SNModelController.m in Sources */,
 				3A2D42E218797D79004813A3 /* AFSecurityPolicy.m in Sources */,
+				3A2D439E187B0F43004813A3 /* GPUserDefaults.m in Sources */,
+				3A2D43A2187B0FD6004813A3 /* SNUserDefault.m in Sources */,
+				3A2D4391187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m in Sources */,
 				3A2D42DE18797D79004813A3 /* AFHTTPRequestOperation.m in Sources */,
+				3A2D4392187AEA41004813A3 /* easing.c in Sources */,
 				3A2D42EF18799E82004813A3 /* UIImageView+AFNetworking.m in Sources */,
 				3A2D42E9187994EA004813A3 /* SNTopViewController.m in Sources */,
 				3A2D42EC18799519004813A3 /* SNArtistViewController.m in Sources */,
+				3A2D43A5187B1023004813A3 /* SNKeyChain.m in Sources */,
 				3A2D42E618797D79004813A3 /* AFURLSessionManager.m in Sources */,
 				3A93F6BD18657A8500E145DC /* SNMusicLibrary.m in Sources */,
 				3A93F6A61865743C00E145DC /* SNViewController.m in Sources */,
 				3A2D42E018797D79004813A3 /* AFHTTPSessionManager.m in Sources */,
 				3A93F6AB1865744C00E145DC /* SNAppDelegate.m in Sources */,
+				3A2D4395187B0E68004813A3 /* SNUser.m in Sources */,
 				3A2D42E118797D79004813A3 /* AFNetworkReachabilityManager.m in Sources */,
 				3A2D42DF18797D79004813A3 /* AFHTTPRequestOperationManager.m in Sources */,
 			);

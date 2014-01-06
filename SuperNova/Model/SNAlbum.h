@@ -14,7 +14,8 @@
 @property (nonatomic, strong) NSString *collectionId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *artistName;
-@property (nonatomic, strong) NSString *artwork;
+@property (nonatomic, strong) NSString *artworkUrl;
+@property (nonatomic, strong) UIImage *artwork;
 @property (nonatomic, strong) NSString *releaseDate;
 @property (nonatomic, strong) NSArray *tracks;
 

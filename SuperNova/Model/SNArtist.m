@@ -41,4 +41,30 @@
          failure:failure];
 }
 
+- (void)followWithUuid:(NSString *)uuid
+{
+    NSDictionary *params = @{@"artist_id" : @(self.itunesId),
+                             @"uuid" : uuid};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@""
+       parameters:params
+constructingBodyWithBlock:nil
+          success:nil
+          failure:nil];
+}
+
+- (void)unFollowWithUuid:(NSString *)uuid
+{
+    NSDictionary *params = @{@"artist_id" : @(self.itunesId),
+                             @"uuid" : uuid};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@""
+       parameters:params
+constructingBodyWithBlock:nil
+          success:nil
+          failure:nil];
+}
+
 @end

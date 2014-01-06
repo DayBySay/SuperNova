@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *artistImageView;
 @property (weak, nonatomic) IBOutlet UITextView *artistDescriptionView;
 @property (weak, nonatomic) IBOutlet UITableView *albumsTableView;
+@property (weak, nonatomic) IBOutlet UIButton *followButton;
 @property (nonatomic, strong) NSMutableArray *albums;
 @property (nonatomic, strong) SNArtist *artist;
+
 
 @end

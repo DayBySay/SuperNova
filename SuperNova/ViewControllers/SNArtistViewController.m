@@ -10,6 +10,7 @@
 #import "SNAlbum.h"
 #import "UIImageView+AFNetworking.h"
 #import "SNAlbumListViewController.h"
+#import "SNUser.h"
 
 @interface SNArtistViewController ()
 
@@ -50,7 +51,7 @@
                                    SNAlbum *album = [[SNAlbum alloc] init];
                                    album.collectionId = [item objectForKey:@"collectionId"];
                                    album.name = [item objectForKey:@"collectionName"];
-                                   album.artwork = [item objectForKey:@"artworkUrl100"];
+                                   album.artworkUrl = [item objectForKey:@"artworkUrl100"];
                                    album.releaseDate = [item objectForKey:@"releaseDate"];
                                    [self.albums addObject:album];
                                }
@@ -89,7 +90,8 @@
     
     SNAlbum *album = [self.albums objectAtIndex:indexPath.row];
     cell.textLabel.text = album.name;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:album.artwork]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:album.artworkUrl]];
+    album.artwork = cell.imageView.image;
     
     // Configure the cell...
     return cell;
@@ -100,6 +102,18 @@
     SNAlbumListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snalbumlist"];
     vc.albums = self.albums;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+# pragma mark - origin methods
+
+- (void)followArtist
+{
+    [self.artist followWithUuid:[SNUser getUUID]];
+}
+
+- (void)unFollowArtist
+{
+    [self.artist unFollowWithUuid:[SNUser getUUID]];
 }
 
 @end

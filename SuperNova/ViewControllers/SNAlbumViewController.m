@@ -8,6 +8,9 @@
 
 #import "SNAlbumViewController.h"
 #import "SNTrack.h"
+#import "CAKeyframeAnimation+AHEasing.h"
+
+#define SCALE 0.8f
 
 @interface SNAlbumViewController ()
 
@@ -21,9 +24,9 @@
 	// Do any additional setup after loading the view.
     self.albumTitleLabel.text = self.album.name;
     self.tracks = [[NSMutableArray alloc] init];
+    self.artworkImageView.image = self.album.artwork;
     [SNTrack getTracksByCollectionid:self.album.collectionId
                              success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                 NSLog(@"%@", responseObject);
                                  NSArray *results = [responseObject objectForKey:@"results"];
                                  for (NSDictionary *item in results) {
                                      SNTrack *track = [[SNTrack alloc] init];
@@ -78,5 +81,54 @@
     
 }
 
+# pragma mark - animation methods
+
+- (void)animateShrinkDuration:(float)duration
+{
+    CAAnimationGroup *animationGroup = [[CAAnimationGroup alloc] init];
+    
+    CAKeyframeAnimation *widthAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"
+                                                                           function:LinearInterpolation
+                                                                          fromValue:1.0f
+                                                                            toValue:SCALE];
+    
+    CAKeyframeAnimation* heightAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"
+                                                                            function:LinearInterpolation
+                                                                           fromValue:1.0f
+                                                                             toValue:SCALE];
+    
+    animationGroup.animations = [[NSArray alloc] initWithObjects:widthAnimation, heightAnimation, nil];
+    animationGroup.fillMode = kCAFillModeForwards;
+    animationGroup.removedOnCompletion = NO;
+    animationGroup.duration = duration;
+    animationGroup.repeatCount = 1;
+    
+    [self.onContentsView.layer addAnimation:animationGroup
+                                     forKey:@"shrink"];
+}
+
+- (void)animateBulgeDuration:(float)duration
+{
+    CAAnimationGroup *animationGroup = [[CAAnimationGroup alloc] init];
+    
+    CAKeyframeAnimation *widthAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"
+                                                                           function:LinearInterpolation
+                                                                          fromValue:SCALE
+                                                                            toValue:1.0f];
+    
+    CAKeyframeAnimation* heightAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"
+                                                                            function:LinearInterpolation
+                                                                           fromValue:SCALE
+                                                                             toValue:1.0f];
+    
+    animationGroup.animations = [[NSArray alloc] initWithObjects:widthAnimation, heightAnimation, nil];
+    animationGroup.fillMode = kCAFillModeForwards;
+    animationGroup.removedOnCompletion = NO;
+    animationGroup.duration = duration;
+    animationGroup.repeatCount = 1;
+    
+    [self.onContentsView.layer addAnimation:animationGroup
+                                     forKey:@"bulge"];
+}
 
 @end
