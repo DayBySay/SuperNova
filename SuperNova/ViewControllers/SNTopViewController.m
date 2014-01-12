@@ -44,6 +44,8 @@
     
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(wish.view.frame) + CGRectGetWidth(follow.view.frame),
                                              wish.view.frame.size.height);
+    
+    self.scrollView.delegate = self;
 }
 
 
@@ -159,9 +161,34 @@
     return YES;
 }
 
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+#pragma mark - scrollview delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
+    if (scrollView.contentOffset.x == 0) {
+        self.segment.selectedSegmentIndex = 0;
+    } else if (scrollView.contentOffset.x >= 320){
+        self.segment.selectedSegmentIndex = 1;
+    }
 }
 
+#pragma mark - segmentedControl method
+
+- (IBAction)segmentedControlPressed:(id)sender
+{
+    UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
+    CGPoint destination;
+    switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            destination = CGPointMake(0, 0);
+            break;
+        case 1:
+            destination = CGPointMake(self.scrollView.contentSize.width / 2, 0);
+            break;
+    }
+    float duration = 0.3f;
+    [UIView animateWithDuration:duration animations:^ {
+        [self.scrollView setContentOffset:destination animated:NO];
+    }];
+}
 @end

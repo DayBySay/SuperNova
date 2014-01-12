@@ -16,4 +16,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+- (IBAction)segmentedControlPressed:(id)sender;
+
 @end

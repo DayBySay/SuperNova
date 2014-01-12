@@ -56,6 +56,9 @@
                                 <segment title="First"/>
                                 <segment title="Second"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="T8t-LD-QGG"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
