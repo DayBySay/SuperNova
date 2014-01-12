@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSArray *artists;
 @property (nonatomic, strong) NSMutableArray *searchedItems;
-@property (weak, nonatomic) IBOutlet UITableView *artistTableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

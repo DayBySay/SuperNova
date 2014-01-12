@@ -10,6 +10,9 @@
 #import "SNMusicLibrary.h"
 #import "SNArtist.h"
 #import "SNArtistViewController.h"
+#import "SNFollowListViewController.h"
+#import "SNWishListViewController.h"
+
 
 @interface SNTopViewController ()
 
@@ -20,18 +23,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view..
-    
-//    SNMusicLibrary *ml = [[SNMusicLibrary alloc] init];
-//    self.artists = [ml getArtistsByLibrary];
-    //    for (id item in self.artists) {
-    //        UIImage *img = [item valueForKey:@"artwork"];
-    //        NSString *name = [item valueForKey:@"name"];
-    //        NSLog(@"name = %@ artwork = %@", name, img);
-    //    }
-    
     self.searchBar.delegate  = self;
     self.searchedItems = [[NSMutableArray alloc] init];
+    
+    SNFollowListViewController *follow = [self.storyboard instantiateViewControllerWithIdentifier:@"follow"];
+    [self.scrollView addSubview:follow.view];
+    [self addChildViewController:follow];
+    follow.view.frame = CGRectMake(0,
+                                   0,
+                                   CGRectGetWidth([UIScreen mainScreen].bounds),
+                                   CGRectGetHeight(self.scrollView.frame));
+    
+    SNWishListViewController *wish = [self.storyboard instantiateViewControllerWithIdentifier:@"wish"];
+    [self.scrollView addSubview:wish.view];
+    [self addChildViewController:wish];
+    wish.view.frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds),
+                                 0,
+                                 CGRectGetWidth([UIScreen mainScreen].bounds),
+                                 CGRectGetHeight(self.scrollView.frame));
+    
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(wish.view.frame) + CGRectGetWidth(follow.view.frame),
+                                             wish.view.frame.size.height);
 }
 
 
@@ -54,13 +66,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    NSUInteger returnValue = 0;
-    
-    if ([self isSearchBarTableView:tableView]) {
-        returnValue = 2;
-    } else {
-        returnValue = 1;
-    }
+    NSUInteger returnValue = 2;
+
     return returnValue;
 }
 
@@ -69,11 +76,7 @@
 {
     // Return the number of rows in the section.
     NSUInteger returnValue = 0;
-    if ([self isSearchBarTableView:tableView]) {
-        returnValue = self.searchedItems.count;
-    } else {
-        returnValue = self.artists.count;
-    }
+    returnValue = self.searchedItems.count;
     return returnValue;
 }
 
@@ -85,15 +88,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    if ([self isSearchBarTableView:tableView]) {
-        if (indexPath.section == 0) {
-            // artist
-            SNArtist *artist = (SNArtist *)[self.searchedItems objectAtIndex:indexPath.row];
-            cell.textLabel.text = artist.name;
-        } else {
-            // album
-        }
-        
+    if (indexPath.section == 0) {
+        // artist
+        SNArtist *artist = (SNArtist *)[self.searchedItems objectAtIndex:indexPath.row];
+        cell.textLabel.text = artist.name;
+
     } else {
         SNArtist *artist = [self.artists objectAtIndex:indexPath.row];
         
@@ -107,23 +106,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self isSearchBarTableView:tableView]) {
-        SNArtistViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snartist"];
-        vc.artist = [self.searchedItems objectAtIndex:indexPath.row];
-        [self.navigationController pushViewController:vc animated:YES];
-    } else {
-        
-    }
+    SNArtistViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snartist"];
+    vc.artist = [self.searchedItems objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
-
-
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated
-{
-    [super setEditing:editing animated:animated];
-    [self.artistTableView setEditing:editing animated:animated];
-}
-
-
 
 # pragma mark - search bar delegae
 
@@ -164,7 +150,6 @@
                           }];
 }
 
-
 #pragma mark - UISearchDisplayController Delegate Methods
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     return YES;
@@ -174,9 +159,9 @@
     return YES;
 }
 
-- (BOOL)isSearchBarTableView:(UITableView*)tableView
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-    return tableView != self.artistTableView;
+    
 }
 
 @end

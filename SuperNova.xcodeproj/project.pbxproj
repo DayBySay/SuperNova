@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F34E65B1882AF5100AD89C6 /* SNFollowListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F34E65A1882AF5100AD89C6 /* SNFollowListViewController.m */; };
+		1F34E65E1882B11F00AD89C6 /* SNWishListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F34E65D1882B11F00AD89C6 /* SNWishListViewController.m */; };
 		1F6CE03A188294BA00311BF6 /* TSPacosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE035188294BA00311BF6 /* TSPacosCell.m */; };
 		1F6CE03B188294BA00311BF6 /* TSPacosTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE037188294BA00311BF6 /* TSPacosTableView.m */; };
 		1F6CE03C188294BA00311BF6 /* TSPacosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE039188294BA00311BF6 /* TSPacosViewController.m */; };
@@ -68,6 +70,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F34E6591882AF5100AD89C6 /* SNFollowListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNFollowListViewController.h; sourceTree = "<group>"; };
+		1F34E65A1882AF5100AD89C6 /* SNFollowListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNFollowListViewController.m; sourceTree = "<group>"; };
+		1F34E65C1882B11F00AD89C6 /* SNWishListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNWishListViewController.h; sourceTree = "<group>"; };
+		1F34E65D1882B11F00AD89C6 /* SNWishListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNWishListViewController.m; sourceTree = "<group>"; };
 		1F6CE034188294BA00311BF6 /* TSPacosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPacosCell.h; sourceTree = "<group>"; };
 		1F6CE035188294BA00311BF6 /* TSPacosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPacosCell.m; sourceTree = "<group>"; };
 		1F6CE036188294BA00311BF6 /* TSPacosTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPacosTableView.h; sourceTree = "<group>"; };
@@ -214,6 +220,10 @@
 			children = (
 				3A2D42E7187994EA004813A3 /* SNTopViewController.h */,
 				3A2D42E8187994EA004813A3 /* SNTopViewController.m */,
+				1F34E6591882AF5100AD89C6 /* SNFollowListViewController.h */,
+				1F34E65A1882AF5100AD89C6 /* SNFollowListViewController.m */,
+				1F34E65C1882B11F00AD89C6 /* SNWishListViewController.h */,
+				1F34E65D1882B11F00AD89C6 /* SNWishListViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -552,6 +562,7 @@
 				3A2D42E418797D79004813A3 /* AFURLRequestSerialization.m in Sources */,
 				3A2D43421879C08E004813A3 /* SNModelController.m in Sources */,
 				3A2D42E218797D79004813A3 /* AFSecurityPolicy.m in Sources */,
+				1F34E65E1882B11F00AD89C6 /* SNWishListViewController.m in Sources */,
 				3A2D439E187B0F43004813A3 /* GPUserDefaults.m in Sources */,
 				1F6CE03B188294BA00311BF6 /* TSPacosTableView.m in Sources */,
 				3A2D43A2187B0FD6004813A3 /* SNUserDefault.m in Sources */,
@@ -563,6 +574,7 @@
 				3A2D42EC18799519004813A3 /* SNArtistViewController.m in Sources */,
 				3A2D43A5187B1023004813A3 /* SNKeyChain.m in Sources */,
 				3A2D42E618797D79004813A3 /* AFURLSessionManager.m in Sources */,
+				1F34E65B1882AF5100AD89C6 /* SNFollowListViewController.m in Sources */,
 				3A93F6BD18657A8500E145DC /* SNMusicLibrary.m in Sources */,
 				3A93F6A61865743C00E145DC /* SNViewController.m in Sources */,
 				3A2D42E018797D79004813A3 /* AFHTTPSessionManager.m in Sources */,
