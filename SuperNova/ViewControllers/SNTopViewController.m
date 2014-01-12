@@ -22,8 +22,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view..
     
-    SNMusicLibrary *ml = [[SNMusicLibrary alloc] init];
-    self.artists = [ml getArtistsByLibrary];
+//    SNMusicLibrary *ml = [[SNMusicLibrary alloc] init];
+//    self.artists = [ml getArtistsByLibrary];
     //    for (id item in self.artists) {
     //        UIImage *img = [item valueForKey:@"artwork"];
     //        NSString *name = [item valueForKey:@"name"];

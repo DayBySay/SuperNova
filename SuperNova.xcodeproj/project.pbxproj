@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6CE03A188294BA00311BF6 /* TSPacosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE035188294BA00311BF6 /* TSPacosCell.m */; };
+		1F6CE03B188294BA00311BF6 /* TSPacosTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE037188294BA00311BF6 /* TSPacosTableView.m */; };
+		1F6CE03C188294BA00311BF6 /* TSPacosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE039188294BA00311BF6 /* TSPacosViewController.m */; };
+		1F6CE0441882989000311BF6 /* SNAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE0431882989000311BF6 /* SNAlbumsViewController.m */; };
+		1F6CE04718829A1F00311BF6 /* SNAlbumContainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CE04618829A1F00311BF6 /* SNAlbumContainViewController.m */; };
 		3A2D42DE18797D79004813A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42CC18797D79004813A3 /* AFHTTPRequestOperation.m */; };
 		3A2D42DF18797D79004813A3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42CE18797D79004813A3 /* AFHTTPRequestOperationManager.m */; };
 		3A2D42E018797D79004813A3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D42D018797D79004813A3 /* AFHTTPSessionManager.m */; };
@@ -63,6 +68,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F6CE034188294BA00311BF6 /* TSPacosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPacosCell.h; sourceTree = "<group>"; };
+		1F6CE035188294BA00311BF6 /* TSPacosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPacosCell.m; sourceTree = "<group>"; };
+		1F6CE036188294BA00311BF6 /* TSPacosTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPacosTableView.h; sourceTree = "<group>"; };
+		1F6CE037188294BA00311BF6 /* TSPacosTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPacosTableView.m; sourceTree = "<group>"; };
+		1F6CE038188294BA00311BF6 /* TSPacosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPacosViewController.h; sourceTree = "<group>"; };
+		1F6CE039188294BA00311BF6 /* TSPacosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPacosViewController.m; sourceTree = "<group>"; };
+		1F6CE0421882989000311BF6 /* SNAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlbumsViewController.h; sourceTree = "<group>"; };
+		1F6CE0431882989000311BF6 /* SNAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbumsViewController.m; sourceTree = "<group>"; };
+		1F6CE04518829A1F00311BF6 /* SNAlbumContainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlbumContainViewController.h; sourceTree = "<group>"; };
+		1F6CE04618829A1F00311BF6 /* SNAlbumContainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbumContainViewController.m; sourceTree = "<group>"; };
 		3A2D42CB18797D79004813A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3A2D42CC18797D79004813A3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3A2D42CD18797D79004813A3 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -167,6 +182,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6CE033188294BA00311BF6 /* PacosTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1F6CE034188294BA00311BF6 /* TSPacosCell.h */,
+				1F6CE035188294BA00311BF6 /* TSPacosCell.m */,
+				1F6CE036188294BA00311BF6 /* TSPacosTableView.h */,
+				1F6CE037188294BA00311BF6 /* TSPacosTableView.m */,
+				1F6CE038188294BA00311BF6 /* TSPacosViewController.h */,
+				1F6CE039188294BA00311BF6 /* TSPacosViewController.m */,
+			);
+			name = PacosTableView;
+			path = ../../../Pacos/PacosTableView;
+			sourceTree = "<group>";
+		};
+		1F6CE03D188297DE00311BF6 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D43401879C08E004813A3 /* SNModelController.h */,
+				3A2D43411879C08E004813A3 /* SNModelController.m */,
+				3A2D42F01879AC32004813A3 /* SNAlbumViewController.h */,
+				3A2D42F11879AC32004813A3 /* SNAlbumViewController.m */,
+				3A2D42F31879AC56004813A3 /* SNAlbumListViewController.h */,
+				3A2D42F41879AC56004813A3 /* SNAlbumListViewController.m */,
+			);
+			name = AlbumList;
+			sourceTree = "<group>";
+		};
+		1F6CE03E1882980500311BF6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D42E7187994EA004813A3 /* SNTopViewController.h */,
+				3A2D42E8187994EA004813A3 /* SNTopViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		1F6CE03F1882981000311BF6 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D42EA18799519004813A3 /* SNArtistViewController.h */,
+				3A2D42EB18799519004813A3 /* SNArtistViewController.m */,
+			);
+			name = Artist;
+			sourceTree = "<group>";
+		};
+		1F6CE0401882981B00311BF6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3A93F6A41865743C00E145DC /* SNViewController.h */,
+				3A93F6A51865743C00E145DC /* SNViewController.m */,
+				3A93F6C11865B9EC00E145DC /* SNTableViewController.h */,
+				3A93F6C21865B9EC00E145DC /* SNTableViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		1F6CE0411882983600311BF6 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				1F6CE0421882989000311BF6 /* SNAlbumsViewController.h */,
+				1F6CE0431882989000311BF6 /* SNAlbumsViewController.m */,
+				1F6CE04518829A1F00311BF6 /* SNAlbumContainViewController.h */,
+				1F6CE04618829A1F00311BF6 /* SNAlbumContainViewController.m */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
 		3A2D42CA18797D79004813A3 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,20 +386,12 @@
 		3A93F6A31865743C00E145DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A2D43401879C08E004813A3 /* SNModelController.h */,
-				3A2D43411879C08E004813A3 /* SNModelController.m */,
-				3A93F6A41865743C00E145DC /* SNViewController.h */,
-				3A93F6A51865743C00E145DC /* SNViewController.m */,
-				3A93F6C11865B9EC00E145DC /* SNTableViewController.h */,
-				3A93F6C21865B9EC00E145DC /* SNTableViewController.m */,
-				3A2D42E7187994EA004813A3 /* SNTopViewController.h */,
-				3A2D42E8187994EA004813A3 /* SNTopViewController.m */,
-				3A2D42EA18799519004813A3 /* SNArtistViewController.h */,
-				3A2D42EB18799519004813A3 /* SNArtistViewController.m */,
-				3A2D42F01879AC32004813A3 /* SNAlbumViewController.h */,
-				3A2D42F11879AC32004813A3 /* SNAlbumViewController.m */,
-				3A2D42F31879AC56004813A3 /* SNAlbumListViewController.h */,
-				3A2D42F41879AC56004813A3 /* SNAlbumListViewController.m */,
+				1F6CE0411882983600311BF6 /* Album */,
+				1F6CE0401882981B00311BF6 /* Common */,
+				1F6CE03F1882981000311BF6 /* Artist */,
+				1F6CE03E1882980500311BF6 /* Home */,
+				1F6CE03D188297DE00311BF6 /* AlbumList */,
+				1F6CE033188294BA00311BF6 /* PacosTableView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -465,16 +539,21 @@
 				3A2D42F81879AE49004813A3 /* SNTrack.m in Sources */,
 				3A2D439D187B0F43004813A3 /* GPKeychain.m in Sources */,
 				3A93F67A186573CA00E145DC /* main.m in Sources */,
+				1F6CE03A188294BA00311BF6 /* TSPacosCell.m in Sources */,
 				3A2D42F21879AC32004813A3 /* SNAlbumViewController.m in Sources */,
 				3A2D439F187B0F43004813A3 /* LKKeychain.m in Sources */,
+				1F6CE0441882989000311BF6 /* SNAlbumsViewController.m in Sources */,
+				1F6CE03C188294BA00311BF6 /* TSPacosViewController.m in Sources */,
 				3A93F6C31865B9EC00E145DC /* SNTableViewController.m in Sources */,
 				3A2D42F51879AC56004813A3 /* SNAlbumListViewController.m in Sources */,
 				3A2D42E518797D79004813A3 /* AFURLResponseSerialization.m in Sources */,
 				3A93F6BC18657A8500E145DC /* SNArtist.m in Sources */,
+				1F6CE04718829A1F00311BF6 /* SNAlbumContainViewController.m in Sources */,
 				3A2D42E418797D79004813A3 /* AFURLRequestSerialization.m in Sources */,
 				3A2D43421879C08E004813A3 /* SNModelController.m in Sources */,
 				3A2D42E218797D79004813A3 /* AFSecurityPolicy.m in Sources */,
 				3A2D439E187B0F43004813A3 /* GPUserDefaults.m in Sources */,
+				1F6CE03B188294BA00311BF6 /* TSPacosTableView.m in Sources */,
 				3A2D43A2187B0FD6004813A3 /* SNUserDefault.m in Sources */,
 				3A2D4391187AEA41004813A3 /* CAKeyframeAnimation+AHEasing.m in Sources */,
 				3A2D42DE18797D79004813A3 /* AFHTTPRequestOperation.m in Sources */,

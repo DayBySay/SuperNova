@@ -9,7 +9,8 @@
 #import "SNArtistViewController.h"
 #import "SNAlbum.h"
 #import "UIImageView+AFNetworking.h"
-#import "SNAlbumListViewController.h"
+//#import "SNAlbumListViewController.h"
+#import "SNAlbumsViewController.h"
 #import "SNUser.h"
 
 @interface SNArtistViewController ()
@@ -99,7 +100,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SNAlbumListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snalbumlist"];
+    SNAlbumsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"snalbums"];
     vc.albums = self.albums;
     [self.navigationController pushViewController:vc animated:YES];
 }
