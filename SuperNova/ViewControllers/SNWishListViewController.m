@@ -19,7 +19,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.wishList = @[@4, @5, @6];
+    self.wishList = @[@"Level5",
+                      @"なんだこれくしょん",
+                      @"ロデオ・タンデム・ビート・スペ"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +49,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [self.wishList[indexPath.row] stringValue];
+    cell.textLabel.text = self.wishList[indexPath.row];
     // Configure the cell...
     return cell;
 }

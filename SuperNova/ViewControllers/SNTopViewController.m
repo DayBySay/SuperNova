@@ -26,25 +26,26 @@
     self.searchBar.delegate  = self;
     self.searchedItems = [[NSMutableArray alloc] init];
     
+    // Wishリストのセット
+    SNWishListViewController *wish = [self.storyboard instantiateViewControllerWithIdentifier:@"wish"];
+    [self.scrollView addSubview:wish.view];
+    [self addChildViewController:wish];
+    wish.view.frame = CGRectMake(0,
+                                 0,
+                                 CGRectGetWidth([UIScreen mainScreen].bounds),
+                                 CGRectGetHeight(self.scrollView.frame));
+    // Followリストのセット
     SNFollowListViewController *follow = [self.storyboard instantiateViewControllerWithIdentifier:@"follow"];
     [self.scrollView addSubview:follow.view];
     [self addChildViewController:follow];
-    follow.view.frame = CGRectMake(0,
+    follow.view.frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds),
                                    0,
                                    CGRectGetWidth([UIScreen mainScreen].bounds),
                                    CGRectGetHeight(self.scrollView.frame));
     
-    SNWishListViewController *wish = [self.storyboard instantiateViewControllerWithIdentifier:@"wish"];
-    [self.scrollView addSubview:wish.view];
-    [self addChildViewController:wish];
-    wish.view.frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds),
-                                 0,
-                                 CGRectGetWidth([UIScreen mainScreen].bounds),
-                                 CGRectGetHeight(self.scrollView.frame));
-    
+    // scrollviewの設定
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(wish.view.frame) + CGRectGetWidth(follow.view.frame),
                                              wish.view.frame.size.height);
-    
     self.scrollView.delegate = self;
 }
 

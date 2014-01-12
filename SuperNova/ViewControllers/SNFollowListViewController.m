@@ -18,7 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.followArtists = @[@1, @2, @3];
+    self.followArtists = @[@"Perfume",
+                           @"きゃりーぱみゅぱみゅ",
+                           @"Thee Michelle Gun Elephant"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +48,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [self.followArtists[indexPath.row] stringValue];
+    cell.textLabel.text = self.followArtists[indexPath.row];
     // Configure the cell...
     return cell;
 }

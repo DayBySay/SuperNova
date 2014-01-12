@@ -49,17 +49,19 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Bzy-Yq-AP9">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="DCi-Th-LRp"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="c0T-nC-lId">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <rect key="frame" x="81" y="6" width="159" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="聞きたい"/>
+                                <segment title="フォロー中"/>
                             </segments>
                             <connections>
                                 <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="T8t-LD-QGG"/>
                             </connections>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="Z5g-m8-B6q"/>
                     </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="xtQ-lu-kFg" id="lC2-IW-1hl"/>
