@@ -7,12 +7,26 @@
 //
 
 #import "SNAppDelegate.h"
+#import "SNUser.h"
 
 @implementation SNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // UUIDの生成と登録
+    NSString *uuidString = [[SNUser sharedManager] getUuid];
+    if (!uuidString) {
+        NSUUID *vendorUUID = [UIDevice currentDevice].identifierForVendor;
+        [[SNUser sharedManager] setUuid:vendorUUID.UUIDString
+                                success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                    NSLog(@"%@", responseObject);
+                                }
+                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                    
+                                }];
+    }
     return YES;
 }
 							

@@ -10,18 +10,32 @@
 #import "SNKeyChain.h"
 #import "SNUserDefault.h"
 
+static SNUser *sharedInstance = nil;
+
+
 @implementation SNUser
 
-- (id)init
++ (SNUser *)sharedManager
 {
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[SNUser alloc] init];
+    });
+    return sharedInstance;
 }
 
-+ (NSString *)getUUID
++ (id)allocWithZone:(NSZone *)zone {
+    
+    @synchronized(self) {
+        if (sharedInstance == nil) {
+            sharedInstance = [super allocWithZone:zone];
+            return sharedInstance;  // 最初の割り当てで代入し、返す
+        }
+    }
+    return nil; // 以降の割り当てではnilを返すようにする
+}
+
+- (NSString *)getUuid
 {
     NSString *uuidString = nil;
     
@@ -32,11 +46,25 @@
         uuidString = [SNUserDefault sharedManager].uuid;
     }
     
-    if (uuidString == nil) {
-        // 端末をサーバに登録してUUIDを取得
-    }
-    [SNKeyChain sharedManager].uuid = uuidString;
-    [SNUserDefault sharedManager].uuid = uuidString;
     return uuidString;
 }
+
+- (void)setUuid:(NSString *)uuid
+        success:(void (^)(AFHTTPRequestOperation *, id))success
+        failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
+{
+    NSDictionary *params = @{@"uuid" : uuid};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@"http://163.43.163.218/worldsend/public/users"
+      parameters:params
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             [SNKeyChain sharedManager].uuid = uuid;
+             [SNUserDefault sharedManager].uuid = uuid;
+             success(operation, responseObject);
+         }
+         failure:failure];
+    
+}
+
 @end

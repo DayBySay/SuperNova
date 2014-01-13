@@ -109,12 +109,12 @@
 
 - (void)followArtist
 {
-    [self.artist followWithUuid:[SNUser getUUID]];
+    [self.artist followWithUuid:[[SNUser sharedManager] getUuid]];
 }
 
 - (void)unFollowArtist
 {
-    [self.artist unFollowWithUuid:[SNUser getUUID]];
+    [self.artist unFollowWithUuid:[[SNUser sharedManager] getUuid]];
 }
 
 @end

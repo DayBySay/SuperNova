@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface SNUser : NSObject
 
 @property (nonatomic, strong) NSString *uuid;
 
-+ (NSString *)getUUID;
++ (SNUser*)sharedManager;
+
+- (NSString *)getUuid;
+- (void)setUuid:(NSString *)uuid
+        success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
