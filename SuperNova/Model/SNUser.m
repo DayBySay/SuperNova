@@ -56,6 +56,7 @@ static SNUser *sharedInstance = nil;
     NSDictionary *params = @{@"uuid" : uuid};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //TODO URLの変更
     [manager POST:@"http://163.43.163.218/worldsend/public/users"
       parameters:params
          success:^(AFHTTPRequestOperation *operation, id responseObject) {

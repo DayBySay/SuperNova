@@ -61,6 +61,7 @@
                            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                
                            }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,14 +108,23 @@
 
 # pragma mark - origin methods
 
-- (void)followArtist
+- (void)followArtist:(BOOL)isFollow
 {
-    [self.artist followWithUuid:[[SNUser sharedManager] getUuid]];
+    [self.artist followWithUuid:[[SNUser sharedManager] getUuid]
+                       isFollow:isFollow
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            
+                        }];
 }
 
-- (void)unFollowArtist
+#pragma mark - IBAction
+
+- (void)follow:(id)sender
 {
-    [self.artist unFollowWithUuid:[[SNUser sharedManager] getUuid]];
+    [self followArtist:true];
 }
 
 @end

@@ -42,29 +42,22 @@
 }
 
 - (void)followWithUuid:(NSString *)uuid
+              isFollow:(BOOL)isFollow
+               success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+               failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 {
-    NSDictionary *params = @{@"artist_id" : @(self.itunesId),
-                             @"uuid" : uuid};
+    NSDictionary *params = @{@"name" : self.name,
+                             @"artist_id" : @(self.itunesId),
+                             @"uuid" : uuid,
+                             @"isFollow" : @(isFollow)};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@""
+    //TODO URL変更
+    [manager POST:@"http://163.43.163.218/worldsend/public/artists"
        parameters:params
 constructingBodyWithBlock:nil
-          success:nil
-          failure:nil];
-}
-
-- (void)unFollowWithUuid:(NSString *)uuid
-{
-    NSDictionary *params = @{@"artist_id" : @(self.itunesId),
-                             @"uuid" : uuid};
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@""
-       parameters:params
-constructingBodyWithBlock:nil
-          success:nil
-          failure:nil];
+          success:success
+          failure:failure];
 }
 
 @end

@@ -23,7 +23,9 @@
                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
-- (void)followWithUuid:(NSString *)uuid;
-- (void)unFollowWithUuid:(NSString *)uuid;
+- (void)followWithUuid:(NSString *)uuid
+              isFollow:(BOOL)isFollow
+               success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+               failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

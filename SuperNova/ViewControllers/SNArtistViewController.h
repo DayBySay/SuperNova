@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSMutableArray *albums;
 @property (nonatomic, strong) SNArtist *artist;
 
+- (IBAction)follow:(id)sender;
 
 @end
