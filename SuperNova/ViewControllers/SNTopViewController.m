@@ -143,6 +143,7 @@
                                   SNArtist *artist = [[SNArtist alloc] init];
                                   artist.itunesId = [[item objectForKey:@"artistId"] integerValue];
                                   artist.name = [item objectForKey:@"artistName"];
+                                  artist.genre = [item objectForKey:@"primaryGenreName"];
                                   
                                   [self.searchedItems addObject: artist];
                               }

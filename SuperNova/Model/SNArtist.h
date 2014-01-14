@@ -13,6 +13,7 @@
 
 @property (nonatomic) int itunesId;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *genre;
 @property (nonatomic, strong) UIImage *artwork;
 
 + (void)getArtistsByKeyword:(NSString *)keyword

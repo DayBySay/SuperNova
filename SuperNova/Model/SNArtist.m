@@ -47,7 +47,8 @@
                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 {
     NSDictionary *params = @{@"name" : self.name,
-                             @"artist_id" : @(self.itunesId),
+                             @"itunes_id" : @(self.itunesId),
+                             @"genre" : self.genre,
                              @"uuid" : uuid,
                              @"isFollow" : @(isFollow)};
     

@@ -19,15 +19,16 @@
     NSString *uuidString = [[SNUser sharedManager] getUuid];
     if (!uuidString) {
         NSUUID *vendorUUID = [UIDevice currentDevice].identifierForVendor;
-        [[SNUser sharedManager] setUuid:vendorUUID.UUIDString
-                                success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                    NSLog(@"%@", responseObject);
-                                }
-                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    
-                                }];
+        uuidString = vendorUUID.UUIDString;
     }
-    
+
+    [[SNUser sharedManager] setUuid:uuidString
+                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                NSLog(@"%@", responseObject);
+                            }
+                            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                
+                            }];
     return YES;
 }
 							
