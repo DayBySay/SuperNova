@@ -16,6 +16,9 @@
 @property (nonatomic, strong) NSString *genre;
 @property (nonatomic, strong) UIImage *artwork;
 
++ (void)getArtistsByUuid:(NSString *)uuid
+                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 + (void)getArtistsByKeyword:(NSString *)keyword
                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;

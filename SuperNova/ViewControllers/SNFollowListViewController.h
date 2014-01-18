@@ -10,6 +10,6 @@
 
 @interface SNFollowListViewController : SNTableViewController
 
-@property (nonatomic, strong) NSArray *followArtists;
+@property (nonatomic, strong) NSMutableArray *followArtists;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "SNFollowListViewController.h"
+#import "SNArtist.h"
+#import "SNUser.h"
 
 @interface SNFollowListViewController ()
 
@@ -18,9 +20,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.followArtists = @[@"Perfume",
-                           @"きゃりーぱみゅぱみゅ",
-                           @"Thee Michelle Gun Elephant"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self reloadFollowArtists];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +52,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = self.followArtists[indexPath.row];
+    SNArtist *artist = self.followArtists[indexPath.row];
+    cell.textLabel.text = artist.name;
     // Configure the cell...
     return cell;
 }
@@ -56,6 +61,28 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+# pragma mark - api method
+
+- (void)reloadFollowArtists
+{
+    [SNArtist getArtistsByUuid:[[SNUser sharedManager] getUuid]
+                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                           self.followArtists = [[NSMutableArray alloc] init];
+                           NSArray *items = [responseObject objectForKey:@"items"];
+                           for (NSDictionary *item in items) {
+                               SNArtist *artist = [[SNArtist alloc] init];
+                               artist.itunesId = [[item objectForKey:@"itunes_id"] integerValue];
+                               artist.name = [item objectForKey:@"name"];
+                               artist.genre = [item objectForKey:@"genre"];
+                               [self.followArtists addObject:artist];
+                           }
+                               [self.tableView reloadData];
+                   }
+                       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                           
+                       }];
 }
 
 @end

@@ -84,6 +84,7 @@
 		1F6CE0431882989000311BF6 /* SNAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbumsViewController.m; sourceTree = "<group>"; };
 		1F6CE04518829A1F00311BF6 /* SNAlbumContainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlbumContainViewController.h; sourceTree = "<group>"; };
 		1F6CE04618829A1F00311BF6 /* SNAlbumContainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlbumContainViewController.m; sourceTree = "<group>"; };
+		1FE8AF361889A63B009F7ABC /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		3A2D42CB18797D79004813A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3A2D42CC18797D79004813A3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3A2D42CD18797D79004813A3 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -363,6 +364,7 @@
 				3A93F676186573CA00E145DC /* InfoPlist.strings */,
 				3A93F679186573CA00E145DC /* main.m */,
 				3A93F67B186573CA00E145DC /* SuperNova-Prefix.pch */,
+				1FE8AF361889A63B009F7ABC /* Const.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

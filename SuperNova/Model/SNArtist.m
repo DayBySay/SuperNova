@@ -10,6 +10,19 @@
 
 @implementation SNArtist
 
++ (void)getArtistsByUuid:(NSString *)uuid
+                 success:(void (^)(AFHTTPRequestOperation *, id))success
+                 failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
+{
+    NSDictionary *params = @{@"uuid" : uuid};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [manager GET:[NSString stringWithFormat:@"%@%@",WORLDSEND_DOMAIN, WORLDSEND_ARTISTS]
+      parameters:params
+         success:success
+         failure:failure];
+}
+
 + (void)getArtistsByKeyword:(NSString *)keyword
                         success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
